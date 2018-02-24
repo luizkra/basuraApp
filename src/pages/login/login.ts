@@ -30,6 +30,7 @@ export class LoginPage {
   loginFacebook__() {
     const fechaInicio = new Date();
     console.log(fechaInicio);
+        localStorage.setItem('username', 'Usuario invitado');
     localStorage.setItem('FechaInicio', ''+fechaInicio);
   	this.navCtrl.setRoot(HomePage);
   }
