@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Events } from 'ionic-angular';
+import { NavController, Events, ToastController } from 'ionic-angular';
 import { ListPage } from '../list/list';
 
 @Component({
@@ -15,7 +15,7 @@ export class HomePage {
   	totalDias: any =0;
   	productoPlus: any= 'Vacío';
 
-  constructor(public navCtrl: NavController, public events: Events) {
+  constructor(public navCtrl: NavController, public events: Events, public toastCtrl: ToastController) {
   	this.check();
     events.subscribe('addToBottle', (dataTrash) => {
       this.addTrash(dataTrash);
@@ -40,6 +40,8 @@ export class HomePage {
   		this.calcPromedio();
   		this.getProductoPlus();
     }, 500);
+
+    this.presentToast('Se agrego correctamente');
 
   }
 
@@ -97,5 +99,13 @@ export class HomePage {
      }
      return diffDays;
    }
+   presentToast(msj) {
+    let toast = this.toastCtrl.create({
+      message: msj,
+      duration: 3000,
+      position: 'bottom'
+    });
+    toast.present();
+  }
 
 }

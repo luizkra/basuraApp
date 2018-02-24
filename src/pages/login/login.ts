@@ -27,7 +27,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  loginFacebookSimulate() {
+  loginFacebook__() {
     const fechaInicio = new Date();
     console.log(fechaInicio);
     localStorage.setItem('FechaInicio', ''+fechaInicio);
@@ -39,15 +39,15 @@ export class LoginPage {
     .then((res: FacebookLoginResponse) => {
       console.log('Logged into Facebook!', res);
       this.fb.api("/"+res.authResponse.userID+"?fields=id,email,name,birthday,picture?redirect=0,type=large",["email", "public_profile","user_birthday"]).then((resp) => {
-        console.log(resp);
         console.log("Result: ",resp.email);
-        console.log("Result: ",res.authResponse.accessToken);
+        localStorage.setItem('username', resp.email);
         localStorage.setItem('sessionKey', res.authResponse.accessToken);
+        localStorage.setItem('FechaInicio', ''+new Date());
+        this.navCtrl.setRoot(HomePage);
       }).catch(e => console.log('Error api----', e));
     })
     .catch(e => {
       console.log('Error logging into Facebook', e);       
-      this.events.publish('errorToast', 'No se establecio la conexión con Facebook');
     });
   }
 

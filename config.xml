@@ -85,4 +85,5 @@
         <variable name="APP_ID" value="2027457283950101" />
         <variable name="APP_NAME" value="multi" />
     </plugin>
+    <engine name="android" spec="~6.3.0" />
 </widget>
