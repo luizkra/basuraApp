@@ -26,8 +26,11 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-  
+
   loginFacebook() {
+    const fechaInicio = new Date();
+    console.log(fechaInicio);
+    localStorage.setItem('FechaInicio', ''+fechaInicio);
   	this.navCtrl.setRoot(HomePage);
   }
 

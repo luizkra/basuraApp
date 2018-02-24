@@ -12,6 +12,7 @@ export class HomePage {
   	FechaInicio: any;
   	promedio: any= 0;
   	totalkg: any =0;
+  	totalDias: any =0;
   	productoPlus: any= 'Vacío';
 
   constructor(public navCtrl: NavController, public events: Events) {
@@ -20,6 +21,10 @@ export class HomePage {
       this.addTrash(dataTrash);
     });
 
+  }
+  ionViewDidLoad(){
+  	this.totalDias =this.getDays();
+  	console.log(this.totalDias);
   }
 
   addTrash(data){
@@ -69,5 +74,28 @@ export class HomePage {
     (localStorage.getItem('productoPlus'))?( this.productoPlus=localStorage.getItem('productoPlus')):( this.productoPlus='Vacío');
     (JSON.parse(localStorage.getItem('bottle')))?( this.bottle=JSON.parse(localStorage.getItem('bottle'))):( '');
   }
+  
+  //get days after of login
+  getDays() {
+     var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+     var oneHour = 60*60*1000;
+
+     console.log(this.FechaInicio);
+     var firstDate = new Date(this.FechaInicio);
+     var myDate = new Date(firstDate.getTime() + firstDate.getTimezoneOffset()*60000);
+     var secondDate = new Date();
+     console.log(myDate);
+     console.log(secondDate);
+     var diffDays = Math.round(Math.abs((myDate.getTime() - secondDate.getTime())/(oneDay)));
+     console.log(diffDays);
+     if (diffDays === 0) {
+        var hour = Math.round(Math.abs((myDate.getTime() - secondDate.getTime())/(oneHour)));
+        console.log(hour);
+        if (hour > 1) {
+          diffDays = 1
+        }
+     }
+     return diffDays;
+   }
 
 }
