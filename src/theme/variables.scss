@@ -38,13 +38,21 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  red_buton:  #ff0000,
+  base:       #517ce3,
+  base_dos:	  #00a6ff,
+  text_gray:  #cccccd,
+  btn_gray:   #47525e
 );
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
+$toolbar-ios-title-font-size: 3rem;
+$searchbar-ios-background-color: #fff;
+$searchbar-ios-input-background-color: color($colors, text_gray);
 
 
 
@@ -52,7 +60,8 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+$toolbar-background: color($colors, base);
+$toolbar-md-title-font-size: 3rem;
 
 
 

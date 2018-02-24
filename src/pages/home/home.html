@@ -1,18 +1,44 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button class="btn_menu" ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>BasurApp</ion-title>
+    <ion-buttons end>
+      <button class="plus-button" (click)="openList()">
+          
+      <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content no-padding class="normal">
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-grid no-padding  class="Content_trash">
+      <p class="text_tarsh">7 días</p>
+      <ion-icon class="icon_trash" name="trash"></ion-icon>
+      <p class="text_tarsh">{{totalkg}} kg</p>
+    </ion-grid>
+    <div class="bg-border-radius">
+    </div>
+  <ion-grid no-padding  class="normal_grid">
+    <ion-row padding-horizontal>
+    <ion-col col-6 text-center class="box-text">
+      <p>Producto más consumido</p>      
+    </ion-col>
+    <ion-col col-6 text-center class="box-text">
+      <p class="text_middle">{{productoPlus}}</p>      
+    </ion-col>
+  </ion-row>
+    <ion-row padding-horizontal>
+    <ion-col col-6 text-center class="box-text">
+      <p class="promedio">Promedio anual</p>      
+    </ion-col>
+    <ion-col col-6 text-center class="box-text">
+      <p class="text_middle">{{promedio}} kg</p>      
+    </ion-col>
+  </ion-row>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  </ion-grid>
 </ion-content>

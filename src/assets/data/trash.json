@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "name": "Bolsa de papas",
+        "kg": ".03"
+    },
+    {
+        "id": 2,
+        "name": "Botella bacía",
+        "kg": ".8"
+    },
+    {
+        "id": 3,
+        "name": "Papel sanitario",
+        "kg": "0.5"
+    },
+    {
+        "id": 4,
+        "name": "Bolsas rotas",
+        "kg": "0.3"
+    },
+    {
+        "id": 5,
+        "name": "Ropa vieja",
+        "kg": "3"
+    },
+    {
+        "id": 6,
+        "name": "Botella de yogurth",
+        "kg": "1"
+    },
+    {
+        "id": 7,
+        "name": "Botella tetra pack",
+        "kg": "1"
+    },
+    {
+        "id": 8,
+        "name": "Unicel",
+        "kg": "2"
+    },
+    {
+        "id": 9,
+        "name": "Plastico",
+        "kg": "4"
+    },
+    {
+        "id": 10,
+        "name": "Carton",
+        "kg": "10"
+    },
+    {
+        "id": 11,
+        "name": "Colilla de cigarro",
+        "kg": "7"
+    },
+    {
+        "id": 12,
+        "name": "Cascara de huevo",
+        "kg": "0.5"
+    },
+    {
+        "id": 13,
+        "name": "Pañales",
+        "kg": "10"
+    },
+    {
+        "id": 14,
+        "name": "envoltura de chicle",
+        "kg": "0.2"
+    },
+    {
+        "id": 15,
+        "name": "Papel",
+        "kg": "6"
+    }
+]

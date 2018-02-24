@@ -1,3 +1,29 @@
 page-list {
+	.content {
+
+		background-color: color($colors, base_dos);
+	}
+	// .searchbar-ios .searchbar-search-icon {
+ //    	left: 38%;
+	// }
+	.searchbar-input{
+		text-align: center;
+	}
+	.list-ios > .item-block:first-child{
+		    border-top: 0px solid transparent;
+	}
+	.list-ios .item-block .item-inner, .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{
+		    border-bottom: 0px solid transparent;		
+	}
+	.item{
+		background-color: transparent;
+	}
+	.search{
+		position: fixed;
+    	z-index: 100;
+	}
+	label{
+		color: color($colors, btn_gray);
+	}
 
 }
